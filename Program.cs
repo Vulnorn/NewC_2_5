@@ -7,55 +7,55 @@ namespace NewC_2_5
         static void Main(string[] args)
         {
             bool isWork = true;
-            int userInput;
-            int consoleMenu1 = 1;
-            int consoleMenu2 = 2;
-            int consoleMenu3 = 3;
-            int consoleMenu4 = 4;
-            int consoleMenu5 = 5;
+            string userInput;
+            string consoleMenuSummNumbers = "1";
+            string consoleMenuTimesNumbers = "2";
+            string consoleMenuRandomNumber = "3";
+            string consoleMenuClaerConsole = "4";
+            string consoleMenuExite = "5";
 
             while (isWork)
             {
                 Console.WriteLine($"Выберите пункт меню:\n" +
-                    $"1. Сложить два числа.\n" +
-                    $"2. Умножить два числа.\n" +
-                    $"3. Показать рандомное число.\n" +
-                    $"4. Очистить консоль.\n" +
-                    $"5. Выход.\n");
+                    $"{consoleMenuSummNumbers}. Сложить два числа.\n" +
+                    $"{consoleMenuTimesNumbers}. Умножить два числа.\n" +
+                    $"{consoleMenuRandomNumber}. Показать рандомное число.\n" +
+                    $"{consoleMenuClaerConsole}. Очистить консоль.\n" +
+                    $"{consoleMenuExite}. Выход.\n");
 
-                userInput = Convert.ToInt32(Console.ReadLine());
+                userInput = Console.ReadLine();
 
-                if (userInput == consoleMenu1)
+                if (userInput == consoleMenuSummNumbers)
                 {
                     Console.WriteLine($"Vvedite pervoe chislo");
 
-                    userInput = Convert.ToInt32(Console.ReadLine());
-                    int ferstNumber = userInput;
+                    userInput = Console.ReadLine();
+                    int ferstNumber = Convert.ToInt32(userInput);
 
                     Console.WriteLine($"Vvedite vtoroe chislo");
 
-                    userInput = Convert.ToInt32(Console.ReadLine());
-                    int secondNumber = userInput;
+                    userInput = Console.ReadLine();
+                    int secondNumber = Convert.ToInt32(userInput);
                     int summaNumbers = ferstNumber + secondNumber;
 
                     Console.WriteLine($"Cymma chisel - {summaNumbers}");
                 }
-                else if (userInput == consoleMenu2)
+                else if (userInput == consoleMenuTimesNumbers)
                 {
                     Console.WriteLine($"Vvedite pervoe chislo");
 
-                    userInput = Convert.ToInt32(Console.ReadLine());
-                    int ferstNumber = userInput;
+                    userInput = Console.ReadLine();
+                    int ferstNumber = Convert.ToInt32(userInput);
 
                     Console.WriteLine($"Vvedite vtoroe chislo");
 
-                    userInput = Convert.ToInt32(Console.ReadLine());
-                    int secondNumber = userInput;
+                    userInput = Console.ReadLine();
+                    int secondNumber = Convert.ToInt32(userInput);
                     int summaNumbers = ferstNumber * secondNumber;
 
                     Console.WriteLine($"Proizvedenie chisel - {summaNumbers}");
                 }
-                else if (userInput == consoleMenu3)
+                else if (userInput == consoleMenuRandomNumber)
                 {
                     Random random = new Random();
 
@@ -63,11 +63,11 @@ namespace NewC_2_5
 
                     Console.WriteLine($"Slychainoe chislo - {randomNumber}");
                 }
-                else if (userInput == consoleMenu4)
+                else if (userInput == consoleMenuClaerConsole)
                 {
                     Console.Clear();
                 }
-                else if (userInput == consoleMenu5)
+                else if (userInput == consoleMenuExite)
                 {
                     isWork = false;
                 }
